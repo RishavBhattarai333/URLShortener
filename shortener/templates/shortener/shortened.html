@@ -1,0 +1,23 @@
+{% extends 'shortener/base.html' %}
+{% block content %}
+<h2>Short URL Created!</h2>
+
+<div class="shortened-container">
+    <p>Your short URL is:</p>
+    <a href="/{{ short.url_code }}/" target="_blank" class="my-link my-short-link">
+        {{ request.get_host }}/{{ short.url_code }}/
+    </a>
+
+    <p>Original URL:</p>
+    <a href="{{ short.original_url }}" target="_blank" class="my-link">
+        {{ short.original_url }}
+    </a>
+
+    <p>Clicks: {{ short.clicks }}</p>
+
+    <p style="margin-top: 15px;">
+        <a href="/create/" class="my-btn">Create Another URL</a>
+        <a href="/my-urls/" class="my-btn">View My URLs</a>
+    </p>
+</div>
+{% endblock %}

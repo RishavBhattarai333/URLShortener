@@ -1,0 +1,267 @@
+/* =======================
+   General Styles
+======================= */
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #dfd7f7;  /* silver */
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2 {
+    color: #4b0082;  /* indigo headings */
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+    color: #6a0dad; /* purple links */
+}
+
+/* =======================
+   Header
+======================= */
+header {
+    display: flex;
+    align-items: center;
+    padding: 15px 20px;
+    background-color: #caabff; /* white header */
+    box-shadow: 0 2px 5px rgba(75,0,130,0.1); /* subtle indigo shadow */
+}
+
+header img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 12px;
+}
+
+header h1 {
+    font-size: 1.5em;
+    color: #6a0dad; /* purple title */
+}
+
+/* =======================
+   Navbar
+======================= */
+.my-navbar {
+    background-color: #6a0dad; /* purple navbar */
+    padding: 10px 0;
+    box-shadow: 0 2px 4px rgba(75,0,130,0.1);
+}
+
+.my-navbar .my-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.my-brand {
+    color: #2e003e; /* dark purple */
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+.my-nav {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+    margin: 0;
+    padding: 0;
+}
+
+.my-nav li a {
+    color: #2e003e;
+    font-weight: 500;
+    padding: 6px 12px;
+    border-radius: 4px;
+}
+
+.my-nav li a:hover {
+    background-color: #4b0082; /* indigo hover */
+}
+
+/* =======================
+   Containers
+======================= */
+.my-container {
+    max-width: 95%;       /* almost full width */
+    margin: 20px auto;
+    padding: 15px;
+    background-color: #d4c6fb; /* white content background */
+    box-shadow: 0 0 10px rgba(75,0,130,0.1); /* subtle indigo shadow */
+    border-radius: 8px;
+}
+
+
+
+/* =======================
+   Forms
+======================= */
+.my-form {
+    background-color: #daaaf4;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(75,0,130,0.1); /* subtle indigo glow */
+    max-width: 500px;
+    margin: 50px auto;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column; /* stack label and input vertically */
+    margin-bottom: 15px;   /* space between fields */
+}
+
+.form-group label {
+    font-weight: bold;
+    margin-bottom: 6px;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1em;
+    box-sizing: border-box; /* ensures padding doesn't break layout */
+}
+
+.field-error {
+    color: #a71d1d; /* error in dark red for visibility */
+    font-size: 0.9em;
+    margin-top: 4px;
+}
+
+/* =======================
+   Buttons
+======================= */
+.my-btn {
+    background-color: #6a0dad; /* purple button */
+    color: white;
+    border: none;
+    padding: 10px 18px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.2s ease;
+}
+
+.my-btn:hover {
+    background-color: #4b0082; /* indigo hover */
+}
+
+.my-btn-danger {
+    background-color: #ef8585; /* dark red danger */
+}
+
+.my-btn-danger:hover {
+    background-color: #e70606; /* deeper red hover */
+}
+
+/* =======================
+   Tables
+======================= */
+.my-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-color: #ffffff;
+    box-shadow: 0 0 8px rgba(75,0,130,0.05);
+    border-radius: 8px;
+    overflow: hidden;
+    table-layout: auto;
+}
+
+.my-table th, 
+.my-table td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;          /* adjust per column if needed */
+    word-wrap: break-word;     /* wrap long content */
+    overflow-wrap: anywhere;
+}
+
+
+.my-table th {
+    background-color: #e6e6fa; /* light lavender header */
+    font-weight: bold;
+    min-width: 50px;
+}
+
+.my-table td {
+    min-width: 100px;
+}
+
+.my-table td a {
+    color: #6a0dad;
+}
+
+.my-table td a:hover {
+    text-decoration: underline;
+}
+
+/*.my-table td.original-url {
+    max-width: 500px;          
+    word-wrap: break-word;     
+    overflow-wrap: anywhere;
+    white-space: normal;  
+} */
+
+
+
+/* =======================
+   Expired / Shortened pages
+======================= */
+.expired-container,
+.shortened-container {
+    background-color: #ffffff;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(75,0,130,0.1);
+    max-width: 600px;
+    margin: 20px auto;
+    text-align: center;
+}
+
+.shortened-container .my-short-link {
+    font-size: 1.2em;
+    font-weight: bold;
+    margin: 10px 0;
+    display: block;
+}
+
+.expired-container {
+   background-color: #fdeaea; /* light red background */
+    color: #8b0000;           /* dark red text */
+}
+
+.expired-container a.my-btn-link {
+    background-color: #b22222; /* firebrick red */
+    color: #ffffff;
+    padding: 8px 16px;
+    border-radius: 6px;
+    margin: 5px;
+    display: inline-block;
+}
+
+.expired-container a.my-btn-link:hover {
+    background-color: #7a0000; /* deeper red */
+}
+
+.expired-container h1 {
+    color: #8b0000;
+}
+
+
+/* =======================
+   Misc
+======================= */
+.mt-4 { margin-top: 20px; }
+.mt-2 { margin-top: 10px; }
+.text-center { text-align: center; }

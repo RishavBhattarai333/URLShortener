@@ -1,0 +1,10 @@
+{% extends "shortener/base.html" %}
+
+{% block content %}
+<div class="expired-container">
+    <h1>URL Expired</h1>
+    <p>Sorry, the short URL <strong>{{ url.short_code }}</strong> has expired and is no longer available.</p>
+    <p><a href="{% url 'create' %}" class="my-btn-link">Create a new short URL</a></p>
+    <p><a href="{% url 'my_urls' %}" class="my-btn-link">Go to my URLs</a></p>
+</div>
+{% endblock %}

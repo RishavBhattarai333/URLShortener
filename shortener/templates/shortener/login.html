@@ -1,0 +1,25 @@
+{% extends 'shortener/base.html' %}
+{% block content %}
+<h2>Login</h2>
+
+<form method="post" class="my-form">
+    {% csrf_token %}
+    
+    <!-- Render form fields with custom styling -->
+    {% for field in form %}
+        <div class="form-group">
+            {{ field.label_tag }}
+            {{ field }}
+            {% if field.errors %}
+                <div class="field-error">{{ field.errors }}</div>
+            {% endif %}
+        </div>
+    {% endfor %}
+
+    <button type="submit" class="my-btn">Login</button>
+</form>
+
+<p style="margin-top: 15px;">
+    Don't have an account? <a href="/register/" class="my-link">Register</a>
+</p>
+{% endblock %}

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>URL Shortener</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+
+<header style="display:flex; align-items:center; padding:10px; background-color:#f5f5f5;">
+    <img src="{% static 'images/Rishav.png' %}" alt="My Photo" class="my-header-img">
+    <h1>Rishav Bhattarai</h1>
+</header>
+
+<nav class="my-navbar">
+    <div class="my-container">
+        <a class="my-brand" href="/create/">URL Shortener</a>
+        <ul class="my-nav">
+            {% if user.is_authenticated %}
+                <li><a href="/create/">Create</a></li>
+                <li><a href="/my-urls/">My URLs</a></li>
+                <li><a href="/logout/">Logout</a></li>
+            {% else %}
+                <li><a href="/register/">Register</a></li>
+                <li><a href="/login/">Login</a></li>
+            {% endif %}
+        </ul>
+    </div>
+</nav>
+
+<div class="my-container">
+    {% block content %}{% endblock %}
+</div>
+
+</body>
+</html>
